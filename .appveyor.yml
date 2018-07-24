@@ -4,7 +4,6 @@ environment:
 
   matrix:
     - PYTHON: C:\Python36
-    - PYTHON: C:\Python27
 
 init:
   - SET PATH=%PYTHON%;%PATH%

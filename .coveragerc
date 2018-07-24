@@ -1,11 +1,11 @@
 [run]
 branch = True
 source =
-    threaders
+    import_update
     tests
 
 [paths]
 source =
-    threaders
-    .tox/*/lib/python*/site-packages/threaders
-    .tox/pypy/site-packages/threaders
+    import_update
+    .tox/*/lib/python*/site-packages/import_update
+    .tox/pypy/site-packages/import_update

@@ -7,13 +7,13 @@ from setuptools import setup
 with io.open('README.rst', 'rt', encoding='utf8') as f:
     readme = f.read()
 
-with io.open('threaders/__init__.py', 'rt', encoding='utf8') as f:
+with io.open('import_update/__init__.py', 'rt', encoding='utf8') as f:
     version = re.search(r'__version__ = \'(.*?)\'', f.read()).group(1)
 
 setup(
-    name='threaders',
+    name='import_update',
     version=version,
-    url='https://github.com/yehonadav/threaders',
+    url='https://github.com/yehonadav/import_update',
     license='Apache Software',
     author='Yehonadav Bar Elan',
     author_email='yonadav.barilan@gmail.com',
@@ -21,7 +21,7 @@ setup(
     maintainer_email='yonadav.barilan@gmail.com',
     description='A small module to support automation of generating valid python variable names from external data.',
     long_description=readme,
-    packages=['threaders'],
+    packages=['import_update'],
     include_package_data=True,
     zip_safe=False,
     platforms='any',
@@ -40,8 +40,6 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
@@ -53,7 +51,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'threaders = threaders.cli:main',
+            'import_update = import_update.cli:main',
         ],
     },
 )
