@@ -9,11 +9,13 @@ run this everytime you want to update your imports.
 # usage example:
 
 from os.path import dirname
+from import_update import update_imports_recursively
+
 update_imports_recursively(dirname(__file__))
 """
 
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 
 import os
@@ -31,7 +33,7 @@ def update_imports(path):
                 name = name[0]
                 imports.append(name)
 
-    file = open(path+'__init__.py', 'w')
+    file = open(path, 'w')
     write = '__all__ = '+str(imports)
     file.write(write)
     file.close()
