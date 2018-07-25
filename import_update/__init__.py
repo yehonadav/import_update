@@ -39,7 +39,7 @@ def update_imports(path):
                 break
 
     all_line = '__all__ = {}\n'.format(str(imports))
-    import_line = 'from . import *\n'
+    import_line = 'from . import {}\n'.format(str(imports)[1:-1].replace("'", ""))
 
     with open(path, 'r') as file:
         lines = file.readlines()
@@ -52,7 +52,7 @@ def update_imports(path):
             lines[i] = all_line
             all_line_exist = True
 
-        elif lines[i].startswith('from . import *'):
+        elif lines[i].startswith(import_line[:-1]):
             lines[i] = import_line
             import_line_exist = True
 

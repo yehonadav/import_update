@@ -28,7 +28,7 @@ def assert_import_lines_did_not_duplicate(files):
             if lines[i].startswith('__all__'):
                 all_line_exist += 1
 
-            elif lines[i].startswith('from . import *'):
+            elif lines[i].startswith('from . import '):
                 import_line_exist += 1
 
         assert all_line_exist == 1
