@@ -15,7 +15,7 @@ update_imports_recursively(dirname(__file__))
 """
 
 
-__version__ = '1.0.3'
+__version__ = '1.0.4'
 
 
 import os
